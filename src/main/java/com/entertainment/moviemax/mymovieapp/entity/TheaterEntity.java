@@ -1,10 +1,25 @@
-package com.entertainment.moviemax.mymovieapp.model;
+package com.entertainment.moviemax.mymovieapp.entity;
 
-public class Theater {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "theater")
+public class TheaterEntity {
 	
+	@Id
+	@Column(name = "theaterid")
 	private String theaterId;
+	
+	@Column(name = "theatername")
 	private String theaterName;
-	private int seatsAvailable; 
+	
+	@Column(name = "seatsavailable")
+	private int seatsAvailable;
+	
+	@Column(name = "city")
 	private String city;
 	
 	public String getTheaterId() {
@@ -32,11 +47,11 @@ public class Theater {
 		this.city = city;
 	}
 	
-	public Theater() {
+	public TheaterEntity() {
 		
 	}
 	
-	public Theater(String theaterId, String theaterName, int seatsAvailable, String city) {
+	public TheaterEntity(String theaterId, String theaterName, int seatsAvailable, String city) {
 		this.theaterId = theaterId;
 		this.theaterName = theaterName;
 		this.seatsAvailable = seatsAvailable;
