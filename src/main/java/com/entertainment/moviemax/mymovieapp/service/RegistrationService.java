@@ -34,6 +34,7 @@ public class RegistrationService {
 		if (!isValidPhoneNumber(user.getPhone()))
 			throw new InvalidPhoneException("RegistrationService.INVALID_PHONE_NUMBER");
 	}
+	
 	public Boolean isValidUserId(String userid) {
 		Boolean b1 = false;
 		Pattern pattern1 = Pattern.compile(regex1);

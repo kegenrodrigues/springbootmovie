@@ -50,16 +50,17 @@ public class MymovieappApplication implements CommandLineRunner {
 			String mail = sc.next();
 			
 			System.out.println("Enter phone: ");
-			String phone = sc.next();
+			int phone = sc.nextInt();
 			
 			System.out.println("Enter city: ");
 			String city = sc.next();
 			
-			user.setName(name);
-			user.setEmail(mail);
+			user.setUsername(name);
+			user.setEmailId(mail);
 			user.setPhone(phone);
-			user.setCity(city);
 		
+			 
+			
 	        //System.out.println("Iterating Hashmap...");  
 		    for(Map.Entry<String,String> m : hmap.entrySet()){    
 		       System.out.println("."+m.getValue()); 
